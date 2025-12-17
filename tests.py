@@ -19,7 +19,7 @@ class TestCase(unittest.TestCase):
         # Reload users to ensure clean state if previous tests modified it in memory
         with open(main.users_path, "r") as f:
             main.users = json.load(f)
-
+   
     def tearDown(self):
         # Restore the original users file
         if os.path.exists(self.users_path + ".bak"):
